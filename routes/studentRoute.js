@@ -1,11 +1,13 @@
-const express = require("express")
-const router = express.Router()
-const {createStudent} = require("../controllers/studentController")
+const express = require("express");
+const router = express.Router();
+// Combinação das importações dos controladores
+const { createStudent, getAllStudents } = require("../controllers/studentController");
 
-// Criar estudante
-router.post("/student", createStudent)
-module.exports = router
+// Definição da rota para criar estudante
+router.post("/student", createStudent);
 
-const { createStudent, getAllStudents,} =require("../controllers/studentController");
-//Get All Students
+// Definição da rota para obter todos os estudantes
 router.get("/student", getAllStudents);
+
+// Exportando o router após todas as rotas estarem definidas
+module.exports = router;
