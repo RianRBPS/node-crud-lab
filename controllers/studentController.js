@@ -1,5 +1,4 @@
 const Student = require("../models/studentModel")
-const student = require("../models/studentModel")
 
 // Create Student
 const createStudent = async (req, res) => {
@@ -24,4 +23,14 @@ module.exports = {
 // }
 
 
+// READ METHOD
+// Get All Students
+const getAllStudents = async(req, res)=>{
+    try {
+      const _students = await Student.find({});
+      res.status(200).json(_students);
+    } catch (error) {
+       res.status(500).json({ message: error.message });
+    }
+  }
 
