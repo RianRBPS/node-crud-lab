@@ -71,4 +71,5 @@ module.exports = {
   getAllStudents,
   getStudent,
   updateStudent,
+  deleteStudent,
 };
