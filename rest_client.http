@@ -1,0 +1,17 @@
+GET http://localhost:3000/api/student HTTP/1.1
+
+###
+
+POST http://localhost:3000/api/student  HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Rian",
+    "address": "1913 Bright Willow Cir",
+    "dateOfBirth": "2003/01/11",
+        "gender": "male",
+        "phoneNum": 40028922
+}
+
+
+###
